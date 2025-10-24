@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: linear-gradient(135deg, oklch(80.434% 0.15221 339.82), #f191d6, #ff5f9f);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background-color: #ff73d5; /* Soft pink background */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.938);
+    }
+    h2 {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 25px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #000;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d63384;
+      border-radius: 6px;
+      box-sizing: border-box;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #000000;
+      box-shadow: 0 0 6px #000000;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    .gender-group label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    button {
+      background-color: #d642aa;
+      color: rgb(0, 0, 0);
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" name="studentID" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required>
+      </div>
+
+      <div class="form-group gender-group">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g., 0912-345-6789" required>
+      </div>
+
+      <div class="form-group">
+        <label for="emergency">Emergency Contact:</label>
+        <input type="tel" id="emergency" name="emergency" placeholder="e.g., 0912-987-6543" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Complete Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+          <option value="">Select Course</option>
+          <option value="bsed">BSed</option>
+          <option value="beed">BEed</option>
+          <option value="bshm">BSHM</option>
+          <option value="bstm">BSTM</option>
+          <option value="bindtech">BINDTECH</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="yearLevel">Year Level:</label>
+        <select id="yearLevel" name="yearLevel" required>
+          <option value="">Select Year</option>
+          <option value="1st">1st Year</option>
+          <option value="2nd">2nd Year</option>
+          <option value="3rd">3rd Year</option>
+          <option value="4th">4th Year</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+</body>
+</html>
